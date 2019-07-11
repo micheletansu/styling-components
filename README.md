@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <img src="https://raw.githubusercontent.com/react-boilerplate/react-boilerplate-brand/master/assets/banner-metal-optimized.jpg" alt="react boilerplate banner" align="center" />
 
 <br />
@@ -168,6 +167,3 @@ This project would not be possible without the support of these amazing folks. [
 
 This project is licensed under the MIT license, Copyright (c) 2019 Maximilian
 Stoiber. For more information see `LICENSE.md`.
-=======
-# styling-components
->>>>>>> c1dbcff1bbf9cf5354d4a9882beace84a87ca87e
