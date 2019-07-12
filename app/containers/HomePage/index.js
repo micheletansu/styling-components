@@ -12,7 +12,7 @@ const inlineStyleObject = {
   flex: 1,
 };
 
-export function HomePage({ position }) {
+export function HomePage({ selected }) {
   // No styled components in this template
   return (
     <div className="container">
@@ -21,19 +21,19 @@ export function HomePage({ position }) {
       </section>
 
       <section style={inlineStyleObject}>
-        <h1>Styled components</h1>
-        <MainBox {...{ position }} />
+        <h1 style={{ color: 'orange' }}>Styling Staylong</h1>
+        <MainBox {...{ selected }} />
       </section>
     </div>
   );
 }
 
 HomePage.propTypes = {
-  position: PropTypes.number,
+  selected: PropTypes.number,
 };
 
 const mapStateToProps = createStructuredSelector({
-  position: makeSelectIndexPosition(),
+  selected: makeSelectIndexPosition(),
 });
 
 const withConnect = connect(mapStateToProps);

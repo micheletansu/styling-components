@@ -22,7 +22,8 @@ const IndexButton = styled.button`
   font-size: 0.8em;
   display: block;
   cursor: pointer;
-  width: 150px;
+  width: 180px;
+
   :hover {
     font-weight: bolder;
     text-decoration: underline;
@@ -34,7 +35,7 @@ function getButtonList(selected, handleIndexClick) {
   for (let i = 0; i < 8; i += 1) {
     buttons[i] = (
       <IndexButton type="button" onClick={() => handleIndexClick(i + 1)}>
-        Box {i + 1}
+        Exemple {i + 1}
       </IndexButton>
     );
 
@@ -47,17 +48,21 @@ function getButtonList(selected, handleIndexClick) {
   return buttons;
 }
 
+const ThemedText = styled.span`
+  color: ${props => props.theme.color};
+`;
+
 export function Index({ handleIndexClick, position }) {
   useInjectReducer({ key: 'index', reducer });
   const buttons = getButtonList(position, handleIndexClick);
 
   return (
-    <div>
-      <span>Index</span>
-      <ThemeProvider theme={theme}>
-        <div>{buttons.map(button => button)}</div>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <ThemedText>Index</ThemedText>
+        {buttons.map(button => button)}
+      </div>
+    </ThemeProvider>
   );
 }
 
