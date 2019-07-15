@@ -6,12 +6,13 @@ import { compose } from 'redux';
 import styled, { ThemeProvider } from 'styled-components';
 
 import { useInjectReducer } from 'utils/injectReducer';
+import { Link } from 'react-router-dom';
 import theme, { invertTheme } from '../../utils/theme';
 import makeSelectIndex, { makeSelectIndexPosition } from './selectors';
 import reducer from './reducer';
 import { setPositionAction } from './actions';
 
-const IndexButton = styled.button`
+const IndexButton = styled(Link)`
   color: ${props => props.theme.color};
   border: 2px solid;
   border-color: ${props => props.theme.color};
@@ -23,6 +24,7 @@ const IndexButton = styled.button`
   display: block;
   cursor: pointer;
   width: 180px;
+  text-decoration: none;
 
   :hover {
     font-weight: bolder;
@@ -34,7 +36,13 @@ function getButtonList(selected, handleIndexClick) {
   const buttons = [];
   for (let i = 0; i < 8; i += 1) {
     buttons[i] = (
-      <IndexButton type="button" onClick={() => handleIndexClick(i + 1)}>
+      // <IndexButton type="button" onClick={() => handleIndexClick(i + 1)}>
+      //   Exemple {i + 1}
+      // </IndexButton>
+      <IndexButton
+        to={`/Exemple${i + 1}`}
+        onClick={() => handleIndexClick(i + 1)}
+      >
         Exemple {i + 1}
       </IndexButton>
     );

@@ -3,10 +3,19 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import PropTypes from 'prop-types';
-import MainBox from 'components/MainBox';
+import { Route, Switch } from 'react-router-dom';
 import Index from 'containers/Index';
 import { makeSelectIndexPosition } from 'containers/Index/selectors';
 import './index.css';
+
+import Exemple1 from 'components/Exemple1';
+import Exemple2 from 'components/Exemple2';
+import Exemple3 from 'components/Exemple3';
+import Exemple4 from 'components/Exemple4';
+import Exemple5 from 'components/Exemple5';
+import Exemple6 from 'components/Exemple6';
+import Exemple7 from 'components/Exemple7';
+import Exemple8 from 'components/Exemple8';
 
 const inlineStyleObject = {
   flex: 1,
@@ -21,8 +30,17 @@ export function HomePage({ selected }) {
       </section>
 
       <section style={inlineStyleObject}>
-        <h1 style={{ color: 'orange' }}>Styling Staylong</h1>
-        <MainBox {...{ selected }} />
+        <h1 style={{ color: 'orange' }}>Styling Stay Long {selected}</h1>
+        <Switch>
+          <Route exact path="/Exemple1" component={Exemple1} />
+          <Route exact path="/Exemple2" component={Exemple2} />
+          <Route exact path="/Exemple3" component={Exemple3} />
+          <Route exact path="/Exemple4" component={Exemple4} />
+          <Route exact path="/Exemple5" component={Exemple5} />
+          <Route exact path="/Exemple6" component={Exemple6} />
+          <Route exact path="/Exemple7" component={Exemple7} />
+          <Route exact path="/Exemple8" component={Exemple8} />
+        </Switch>
       </section>
     </div>
   );
