@@ -34,12 +34,10 @@ const IndexButton = styled(Link)`
 
 function getButtonList(selected, handleIndexClick) {
   const buttons = [];
-  for (let i = 0; i < 8; i += 1) {
+  for (let i = 0; i < 9; i += 1) {
     buttons[i] = (
-      // <IndexButton type="button" onClick={() => handleIndexClick(i + 1)}>
-      //   Exemple {i + 1}
-      // </IndexButton>
       <IndexButton
+        key={`button-${i}`}
         to={`/Exemple${i + 1}`}
         onClick={() => handleIndexClick(i + 1)}
       >
@@ -49,7 +47,9 @@ function getButtonList(selected, handleIndexClick) {
 
     if (i + 1 === selected) {
       buttons[i] = (
-        <ThemeProvider theme={invertTheme}>{buttons[i]}</ThemeProvider>
+        <ThemeProvider key={`theme-${i}`} theme={invertTheme}>
+          {buttons[i]}
+        </ThemeProvider>
       );
     }
   }

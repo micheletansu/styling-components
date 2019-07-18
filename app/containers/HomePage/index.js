@@ -16,6 +16,7 @@ import Exemple5 from 'components/Exemple5';
 import Exemple6 from 'components/Exemple6';
 import Exemple7 from 'components/Exemple7';
 import Exemple8 from 'components/Exemple8';
+import Exemple9 from 'components/Exemple9';
 
 const inlineStyleObject = {
   flex: 1,
@@ -40,6 +41,7 @@ export function HomePage({ selected }) {
           <Route exact path="/Exemple6" component={Exemple6} />
           <Route exact path="/Exemple7" component={Exemple7} />
           <Route exact path="/Exemple8" component={Exemple8} />
+          <Route exact path="/Exemple9" component={Exemple9} />
         </Switch>
       </section>
     </div>
