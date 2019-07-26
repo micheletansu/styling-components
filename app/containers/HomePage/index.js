@@ -8,6 +8,7 @@ import Index from 'containers/Index';
 import { makeSelectIndexPosition } from 'containers/Index/selectors';
 import './index.css';
 
+import GeneralInfo from 'components/GeneralInfo';
 import Exemple1 from 'components/Exemple1';
 import Exemple2 from 'components/Exemple2';
 import Exemple3 from 'components/Exemple3';
@@ -31,7 +32,8 @@ export function HomePage({ selected }) {
       </section>
 
       <section style={inlineStyleObject}>
-        <h1 style={{ color: 'orange' }}>Styling Stay Long {selected}</h1>
+        <h1 style={{ color: 'orange' }}>Styling Components {selected}</h1>
+        <GeneralInfo />
         <Switch>
           <Route exact path="/Exemple1" component={Exemple1} />
           <Route exact path="/Exemple2" component={Exemple2} />

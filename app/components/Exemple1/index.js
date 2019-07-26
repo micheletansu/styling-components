@@ -20,7 +20,6 @@ function Exemple1() {
   return (
     <div>
       <MainBoxStyled>Box 1 - Styled</MainBoxStyled>
-      <p>Pro e contro</p>
 
       <div style={{ textAlign: 'center' }}>
         <pre style={{ display: 'inline', textAlign: 'left' }}>
