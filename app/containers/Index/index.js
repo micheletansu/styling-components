@@ -41,7 +41,7 @@ function getButtonList(selected, handleIndexClick) {
         to={`/Exemple${i + 1}`}
         onClick={() => handleIndexClick(i + 1)}
       >
-        Exemple {i + 1}
+        Example {i + 1}
       </IndexButton>
     );
 
