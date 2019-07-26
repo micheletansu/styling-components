@@ -23,7 +23,7 @@ const MasterBoxStyled = styled(MainBoxStyled)`
 
 const css = {
   color: 'green',
-  bg: 'yellow',
+  bg: 'orange',
 };
 
 function Exemple5() {

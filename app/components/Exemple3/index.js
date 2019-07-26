@@ -10,8 +10,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const breakpoints = {
-  sm: '(max-width: 420px)',
-  md: '(max-width: 1024px)',
+  sm: '(max-width: 599px)',
+  md: '(max-width: 1024px) and (min-width: 600px)',
   lg: '(max-width: 1300px)',
 };
 
@@ -21,7 +21,7 @@ const calculateStuff = props => {
     console.info(`${key}: ${value}`);
   }
   console.groupEnd();
-  return 'orange';
+  return 'yellow';
 };
 
 const MainBoxStyled = styled.div`
@@ -33,6 +33,9 @@ const MainBoxStyled = styled.div`
   border-radius: 3px;
 
   @media ${breakpoints.md} {
+    background: orange;
+  }
+  @media ${breakpoints.sm} {
     background: ${calculateStuff};
   }
 `;

@@ -21,6 +21,10 @@ const ThemedBoxStyled = styled(MainBoxStyled)`
   color: ${props => props.theme.color};
   border-color: ${props => props.theme.color};
   background: ${props => props.theme.bg};
+
+  #notStyled {
+    float: left;
+  }
 `;
 
 const ThemedButtonStyled = styled.button`
@@ -36,7 +40,7 @@ function Exemple7() {
   return (
     <ThemeProvider theme={theme}>
       <ThemedBoxStyled>
-        <button type="button" style={{ float: 'left' }}>
+        <button id="notStyled" type="button">
           Normal button
         </button>
         Box 7 - Theme
